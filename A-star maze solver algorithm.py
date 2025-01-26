@@ -100,8 +100,12 @@ def create_maze_pygame():
     return maze
 
 maze = create_maze_pygame()
-start_row = int(input("Enter start row: ")) - 1
-start_col = int(input("Enter start column: ")) - 1
+start_row = int(input("Enter start row: ")) 
+if start_row != 0: 
+    start_row = start_row -1
+start_col = int(input("Enter start column: ")) 
+if start_col != 0: 
+    start_col = start_col -1
 goal_row = int(input("Enter goal row: ")) - 1
 goal_col = int(input("Enter goal column: ")) - 1
 start = (start_row, start_col) # Sets start cell
